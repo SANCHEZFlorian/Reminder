@@ -1,0 +1,230 @@
+/* CSS */
+
+@font-face {
+    /*  Permet de changer la police */
+    font-family: 'MaSuperPolice';
+
+    /* Nom de la police */
+    src: url('MaSuperPolice.eot') format('eot'), url('MaSuperPolice.woff') format('woff'), url('MaSuperPolice.ttf') format('truetype'), url('MaSuperPolice.svg') format('svg');
+
+    /* Lien des fichiers de la police. Plusieur permettent de s'adapter au navigateur :
+        .ttf  : TrueType Font. Fonctionne sur IE9 et tous les autres navigateurs ;
+        .eot  : Embedded OpenType. Fonctionne sur Internet Explorer uniquement, toutes versions. Ce format est propriétaire, produit par Microsoft ;
+        .otf  : OpenType Font. Ne fonctionne pas sur Internet Explorer ;
+        .svg  : SVG Font. Le seul format reconnu sur les iPhone et iPad pour le moment ;
+        .woff  : Web Open Font Format. Nouveau format conçu pour le Web, qui */
+}
+
+h1 {
+    font-family: 'MaSuperPolice', Arial, serif; /* Permet de changer la police, en priorité sur le premier, puis si le navigateur peut pas, la deuxième, puis la troisième, etc. Recommandé de mettre le serif ou sans-serif en dernier, reconnu de tous.
+                                                        Il faut mettre une apostrophe entourant les polices non connu du CSS et ajouter dedans.
+                                                        Les polices marchant bien sur tout les navigateurs :
+                                                        Arial ; Arial Black ; Comic Sans MS ; Courier New ; Georgia ; Impact ; Times New Roman ; Trebuchet MS ; Verdana. */
+    text-align: right; /* Peut être right, left, center ou justify pour prendre toute la largeur */
+    text-transform: uppercase; /* Peut être uppercase ou lowercase */
+    color: white; /* Permet de mettre la police d'une couleur (héxa ou lettre)*
+                            Les valeurs couleur :
+                            white, silver, gray, black, red, maroon, lime, green, yellow, olive, blue, navy, fuchsia, purple, aqua, teal
+                            rgb(255, 255, 255) */
+    background-color: red; /* Voir color pour les valeurs */
+    background: url("test.png") fixed no-repeat top right; /* Permet de mettre toute les valeurs précédentes en une ligne. Permet aussi de mettre plusieurs images en bg mais suit un ordre (la première par dessus les suivantes) */
+    background-image: url("test.jpg"); /* Permet de mettre une image en fond. */
+    background-attachment: fixed; /* Permet de fixer l'image au lieu de le suivre. Peut remplacer par scroll pour qu'il le suive */
+    background-repeat: no-repeat; /* Permet de répéter ou non le bg. Autres valeurs : repeat-x (pour répéter sur la ligne horizontale), repeat-y (pour répéter sur la verticale) et repeat (pour être en mosaïque) */
+    background-position: center; /* Permet de positionner le fond au centre. Plusieurs valeurs possible (et additionnelles, genr top right) :
+                                        30px 50px : pour le placer à 30px de la gauche et 50 du haut
+                                        top : en haut
+                                        bottom : en bas
+                                        left
+                                        center
+                                        right */
+    opacity: 0; /* Permet de régler l'opacité compris entre 0 et 1 avec un point */
+    font-size: 35px; /* Permet de modifier la taille de la police. Taille possible :
+                            xx-small, x-small, small, medium, large, x-large, xx-large, em (A préférer) (1em = taille normale)
+                            mm, cm, %, ex (A éviter) */
+    font-weight: bold; /* Permet de mettre le texte en gras, et Normal, bold, bolder, lighter, 100,200,300...900, et inherit */
+    font-style: italic; /* Permet de mettre le texte en italique. Autres valeurs : oblique, normal */
+    text-decoration: underline; /* Permet de souligner. Autre valeur :
+                                        underline  : souligné ;
+                                        line-through  : barré ;
+                                        overline  : ligne au-dessus ;
+                                        blink  : clignotant. Ne fonctionne pas sur tous les navigateurs (Internet Explorer et Google Chrome, notamment) ;
+                                        none  : normal (par défaut). */
+    float: left; /* Permet de mettre le bloc ou l'inline en flottant, à droit ou à gauche */
+    clear: left; /* Permet d'annuler l'effet flottant à gauche. Right pour le droit et both pour les deux. */
+    width: 300px; /* Permet de changer la largeur. On peut utiliser les valeurs : px, % */
+    height: 100px; /* Permet de changer la hauteur */
+    min-width: 10px; /* Permet de mettre une largeur minimale */
+    max-width: 50px; /* Permet de mettre une largeur maximale */
+    min-height: 10px; /* Permet de mettre une longueur minimale */
+    max-height: 50px; /* Permet de mettre une longueur maximale */
+    margin: 40%, 20%, 20%, 40%; /* Permet de synthétisé toute les marges sur une seule ligne. Auto pour la mettre pareil partout. Première valeur en haut, puis à droite, bas, gauche */
+    margin-top: 25px; /* Permet de mettre une marge au dessus */
+    margin-right: auto; /* Permet de mettre la même marge grâce à auto */
+    margin-bottom: 30px;
+    margin-left: auto;
+    padding: auto; /* Permet de mettre une marge INTERIEURE au block. Les propriétés et variantes sont les mêmes que margin */
+    overflow: hidden; /* Permet de faire en sorte (ou non) de dépasser du block si ce qu'il y a à l'intérieur est plus gros que le block.
+                            Les valeurs sont :
+                                visible  (par défaut) : si le texte dépasse les limites de taille, il reste visible et sort volontairement du bloc ;
+                                hidden  : si le texte dépasse les limites, il sera tout simplement coupé. On ne pourra pas voir tout le texte ;
+                                scroll  : là encore, le texte sera coupé s'il dépasse les limites. Sauf que cette fois, le navigateur mettra en place des barres de défilement
+                                          pour qu'on puisse lire l'ensemble du texte. C'est un peu comme un cadre à l'intérieur de la page.
+                                auto  : c'est le mode « pilote automatique ». En gros, c'est le navigateur qui décide de mettre ou non des barres de défilement
+                                        (il n'en mettra que si c'est nécessaire). C'est la valeur que je conseille d'utiliser le plus souvent. */
+    word-wrap: break-word; /* Permet de couper ou non les textes dépassant du block. */
+    border: 3px blue solid; /* Permet de mettre une bordure de 3px en bleu et en continue
+                                    Autres valeurs:
+                                    Solid : continue
+                                    dotted : en pointillé
+                                    dashed : en tiret
+                                    double : double continue
+                                    groove
+                                    ridge
+                                    inset
+                                    outset */
+    border-top: 3px blue solid; /* Permet de mettre la bordure en haut. Peut être : left, right, bottom, right */
+    border-radius: 20px / 10px; /* Permet de mettre une courbe. Après le slash, c'est pour la courbe elliptique. On peut aussi mettre 4 valeurs pour chaque angles (de en haut à gauche jusqu'à en bas à gauche */
+    box-shadow: 6px 6px 0.2px black; /* Permet de mettre une ombre. Le premier pour le décalage horizontal, le deuxième pour le vertical, le troisième pour l'adoussiceur, le quatrième pour la couleur.
+        On peut rajouter aussi "inset" pour que l'ombre soit à l'intérieur. */
+    text-shadow: 6px 6px 0.2px black; /* Permet de mettre une ombre sur le texte. Même valeur que le box */
+    display: flex; /* Permet d'activer Flexbox et de mettre les conteneurs côte à côte au lieu d'en dessous les uns des autres */
+    flex-direction: row; /* Permet de changer comment les box sont mis :
+                                row : organisés sur une ligne (par défaut) ;
+                                column : organisés sur une colonne ;
+                                row-reverse : organisés sur une ligne, mais en ordre inversé ;
+                                column-reverse : organisés sur une colonne, mais en ordre inversé. */
+    flex-wrap: nowrap; /* Permet de faire revenir à la ligne les block. Autres valeurs :
+                            nowrap : pas de retour à la ligne (par défaut) ;
+                            wrap : les éléments vont à la ligne lorsqu'il n'y a plus la place ;
+                            wrap-reverse : les éléments vont à la ligne, lorsqu'il n'y a plus la place, en sens inverse. */
+    justify-content: space-between; /* Permet de changer l'alignement de l'axe X. Autres valeurs :
+                                            flex-start : alignés au début (par défaut) ;
+                                            flex-end : alignés à la fin ;
+                                            center : alignés au centre ;
+                                            space-between : les éléments sont étirés sur tout l'axe (il y a de l'espace entre eux) ;
+                                            space-around : idem, les éléments sont étirés sur tout l'axe, mais ils laissent aussi de l'espace sur les extrémités. */
+    align-items: center; /* Permet de changer l'alignement de l'axe Y. Autres valeurs :
+                                stretch : les éléments sont étirés sur tout l'axe (valeur par défaut) ;
+                                flex-start : alignés au début ;
+                                flex-end : alignés à la fin ;
+                                center : alignés au centre ;
+                                baseline : alignés sur la ligne de base (semblable à flex-start). */
+    align-self: center; /* Permet de changer l'alignement de l'axe secondaire du block dans lequel il est mis */
+    order: 1; /* Permet de donner l'autre du block même s'il est écrit en dernier dans le code HTML */
+    flex: 1; /* Permet de savoir combien de place va prendre le block par rapport aux autres. On peut aussi utiliser :
+                    flex-grow  (capacité à grossir)
+                    flex-shrink  (capacité à maigrir)
+                    flex-basis  (taille par défaut) */
+    list-style-type: none; /* Permet d'enlever les puces ou chiffres de la liste à puce. On peut aussi change l'icône en mettant le lien de l'image */
+}
+
+table {
+    border-collapse: collapse; /* Permet de mettre des bordures à nos tableaux qui se collent, mais doit y avoir une bordure de défini au td. separate comme valeurs pour séparer les bordures */
+}
+
+td {
+    border: 1px black solid;
+}
+
+#html:hover { /* Le hover permet d'effectuer quelque chose lors du survol de la chose (en l'occurence, l'id html) */
+    color: blue;
+}
+
+#html:active { /* Permet de changer lors du clic */
+    color: purple;
+}
+
+#html:focus { /* Permet de changer lorsque le truc est sélectionné (par ex, les formulaires avec un tab) */
+    color: red;
+}
+
+a:visited { /* Permet de changer la couleur d'un lien lorsqu'il a déjà été visité */
+    color: gray;
+}
+
+* { /* Permet de sélectionner TOUTES les balises */
+    color: blue;
+}
+
+a:nth-child(2n) { /* Permet de sélectionner un balise sur Xn, où X est un nombre. On peut rajouter un +1 pour commencer à un puis 3 etc */
+    color: black;
+}
+
+h1,
+p { /* La virgule permet de mettre plusieurs balises en même temps */
+    color: red;
+}
+
+h1 + p { /* Permet de mettre le PREMIER paragraphe suivant les h1 */
+    color: black;
+}
+
+h1 em { /* Permet de cibler uniquement les em DANS les h1 */
+    color: red;
+}
+
+p[title] { /* Permet de sélectionner uniquement les balises p ayant un attribut title */
+    color: red;
+}
+
+p[title="ici"] { /* Permet de cibler uniquement les balise p ayant un title qui est exactement "ici" */
+    color: red;
+}
+
+p[title*=ici] { /* Permet de cibler les balises p ayant un title qui comprennent "ici" dans leur title */
+    color: red;
+}
+
+.test { /* le point est pour sélectionner les classes */
+    color: red;
+}
+
+#test { /* le # est pour sélectionner l'id */
+    color: red;
+}
+
+/* Pour être responsive */
+
+@media screen and (max-width: 1280px) { /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+    /* Mettre les directives ici */
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
+    /* Mettre les directives ici */
+}
+
+@media tv { /* Sur les téléviseurs */
+    /* Mettre les directives ici */
+}
+
+@media all and (orientation: portrait) { /* Sur tous types d'écrans orientés verticalement */
+    /* Mettre les directives ici */
+}
+
+@media all and (max-device-width: 480px) {
+    /* Vos règles CSS pour les mobiles ici */
+}
+
+/* Il existe de nombreuses règles permettant de construire des media queries. Je vous présente ici les principales :
+    color  : gestion de la couleur (en bits/pixel) ;
+    height  : hauteur de la zone d'affichage (fenêtre) ;
+    width  : largeur de la zone d'affichage (fenêtre) ;
+    device-height  : hauteur du périphérique ;
+    device-width  : largeur du périphérique ;
+    orientation  : orientation du périphérique (portrait ou paysage) ;
+    media  : type d'écran de sortie. Quelques-unes des valeurs possibles :
+        screen  : écran « classique »,
+        handheld  : périphérique mobile,
+        print  : impression,
+        tv  : télévision,
+        projection  : projecteur,
+        all  : tous les types d'écrans.
+
+On peut rajouter le préfixe min-  ou max-  devant la plupart de ces règles. Ainsi, min-width  signifie « largeur minimale », max-height  « hauteur maximale », etc.
+La différence entre width  et device-width  se perçoit surtout sur les navigateurs mobiles des smartphones ; nous en reparlerons plus loin.
+
+Les règles peuvent être combinées à l'aide des mots suivants :
+    only  : « uniquement » ;
+    and  : « et » ;
+    not  : « non ». */
