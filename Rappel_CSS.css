@@ -15,7 +15,7 @@
         .woff  : Web Open Font Format. Nouveau format conçu pour le Web, qui */
 }
 
-h1 {
+#test {
     font-family: 'MaSuperPolice', Arial, serif; /* Permet de changer la police, en priorité sur le premier, puis si le navigateur peut pas, la deuxième, puis la troisième, etc. Recommandé de mettre le serif ou sans-serif en dernier, reconnu de tous.
                                                         Il faut mettre une apostrophe entourant les polices non connu du CSS et ajouter dedans.
                                                         Les polices marchant bien sur tout les navigateurs :
